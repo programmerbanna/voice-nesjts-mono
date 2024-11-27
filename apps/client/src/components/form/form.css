@@ -1,0 +1,280 @@
+/* Remove App.css padding */
+#root {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  position: relative;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.results-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  padding-bottom: 80px;
+}
+
+.search-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.input-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 8px;
+  gap: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  order: 2;
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 8px 16px;
+  font-size: 16px;
+  outline: none;
+  color: #333;
+}
+
+.voice-button {
+  order: 1;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #f5f5f5;
+  padding: 0;
+  color: #5f6368;
+}
+
+.send-button {
+  order: 3;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #e8f0fe;
+  padding: 0;
+  color: #1a73e8;
+}
+
+.voice-button:hover,
+.send-button:hover {
+  background: #f0f0f0;
+}
+
+.voice-button.listening {
+  background: #fee2e2;
+  color: #dc2626;
+  animation: pulse 1s ease infinite;
+}
+
+.send-button:disabled,
+.voice-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f5f5f5;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.7);
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+    box-shadow: 0 0 0 10px rgba(255, 68, 68, 0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(255, 68, 68, 0);
+  }
+}
+
+.error-message {
+  color: #f44336;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.result-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome-title {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.welcome-text {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+.no-results-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  text-align: center;
+  padding: 20px;
+}
+
+.no-results-text {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.results-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.loading-indicator {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e3f2fd;
+  border-top: 2px solid #1976d2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.shortcuts-info {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.shortcuts-info p {
+  margin: 5px 0;
+}
+
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  color: #333;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  margin: 0 2px;
+}
+
+.clear-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 8px 16px;
+  background-color: #fee2e2;
+  color: #dc2626;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.clear-button:hover {
+  background-color: #fecaca;
+  transform: scale(1.05);
+}
+
+.clear-button:active {
+  transform: scale(0.95);
+}

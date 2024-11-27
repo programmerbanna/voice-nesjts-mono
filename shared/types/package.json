@@ -1,0 +1,14 @@
+{
+  "name": "@voice-nestjs/types",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "tsc": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
+}

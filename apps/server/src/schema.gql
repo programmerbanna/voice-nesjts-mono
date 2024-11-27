@@ -1,0 +1,51 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateProfessionalInput {
+  areaOfPractice: String!
+  branch: [String!]!
+  category: String!
+  name: String!
+  orgOrPracId: String!
+  photo: String!
+  ranking: Float!
+  rating: Float!
+  subCategory: [String!]!
+  totalAppointment: Float!
+  type: ProfessionalType!
+  username: String!
+  zone: [String!]!
+}
+
+type Mutation {
+  createProfessional(createProfessionalInput: CreateProfessionalInput!): Professional!
+}
+
+type Professional {
+  areaOfPractice: String!
+  branch: [String!]!
+  category: String!
+  id: ID!
+  name: String!
+  orgOrPracId: String!
+  photo: String!
+  ranking: Float!
+  rating: Float!
+  subCategory: [String!]!
+  totalAppointment: Float!
+  type: ProfessionalType!
+  username: String!
+  zone: [String!]!
+}
+
+enum ProfessionalType {
+  Organization
+  Practitioner
+}
+
+type Query {
+  getHello: String!
+  getProfessionals: [Professional!]!
+  searchProfessionals(keyword: String!): [Professional!]!
+}
