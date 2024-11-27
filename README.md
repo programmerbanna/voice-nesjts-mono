@@ -11,7 +11,6 @@ A full-stack application that enables users to search for healthcare professiona
 - Keyboard shortcuts support
 - Responsive design
 - Cross-browser compatibility
-- Dark/Light mode support
 
 ## 🏗 Tech Stack
 
