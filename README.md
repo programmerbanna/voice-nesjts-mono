@@ -28,4 +28,3 @@ A full-stack application that enables users to search for healthcare professiona
 - GraphQL with Apollo Server
 - Prisma ORM
 - PostgreSQL database
-- RESTful API principles
