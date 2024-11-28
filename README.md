@@ -28,3 +28,9 @@ A full-stack application that enables users to search for healthcare professiona
 - GraphQL with Apollo Server
 - Prisma ORM
 - PostgreSQL database
+
+## 🎥 Demo Video
+
+Check out the demo video to see the application in action:
+
+[![Voice-Enabled Professional Search Application Demo](./Screenshot.png)](https://drive.google.com/file/d/1cpcDVsYJxtWmGRaG-NcfOlwPyfG3TKSa)
